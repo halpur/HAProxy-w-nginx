@@ -1,0 +1,1 @@
+echo "<h1> My Name is $HOSTNAME </h1>" > index.html

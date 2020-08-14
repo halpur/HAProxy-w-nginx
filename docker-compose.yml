@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+
+  websrv:
+    build:
+      context: ./Nginx
+      dockerfile: ./Dockerfile
+
+  loadbalance:
+    build: 
+      context: ./HAProxy
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - "80:55000"
